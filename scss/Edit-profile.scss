@@ -1,0 +1,135 @@
+@use './mixin/mixins' as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$main-color: #6c5dd3;
+
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #984d38, #181e38);
+}
+
+nav {
+    width: 100%;
+    height: 101px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 51px;
+
+    h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $main-color;
+    }
+
+    .input_nav {
+        @include flex();
+        width: 358px;
+        height: 48px;
+        color: #ffffff;
+        border: 0.5px solid #ffffff;
+        border-radius: 50px;
+        padding-left: 15px;
+        margin: 0 40px 0 40px;
+
+
+        i {
+            font-size: 21px;
+        }
+
+        input {
+            width: 310px;
+            height: 48px;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #ffffff;
+            margin-left: 10px;
+
+
+        }
+
+    }
+
+    .links {
+        @include flex();
+        gap: 40px;
+        color: #ffffff;
+
+        select {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            margin-right: 55px;
+
+            option {
+                padding-bottom: 10px;
+                background: #181e38;
+                color: #ffffff;
+                border: none;
+                outline: none;
+                font-size: 15px;
+                border-bottom: 0.5px solid #ffffff;
+                margin-bottom: 10px;
+
+            }
+
+        }
+    }
+
+    .icons {
+        @include flex();
+        gap: 20px;
+        color: #ffffff;
+
+        i {
+            font-size: 21px;
+        }
+
+        button {
+            width: 108px;
+            height: 38px;
+            background: transparent;
+            border: 0.5px solid #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        select {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            outline: none;
+        }
+
+    }
+}
+
+
+
+.section-1 {
+
+    width: 100%;
+    height: 355px;
+
+    // img {}
+}
